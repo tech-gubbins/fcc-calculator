@@ -7,7 +7,7 @@ const Calculator = () => {
     const [lastClicked, setLastClicked] = useState(null);
 
     const processTokens = (tokens) => {
-        console.log("Original tokens:", tokens);
+        // console.log("Original tokens:", tokens);
 
         const processedTokens = [];
         let lastToken = null;
@@ -15,7 +15,7 @@ const Calculator = () => {
         for (let i = 0; i < tokens.length; i++) {
             const token = tokens[i];
 
-            console.log(`Processing token: ${token}, Last token: ${lastToken}`);
+            // console.log(`Processing token: ${token}, Last token: ${lastToken}`);
 
             if (/[+\-*/]/.test(token)) {
                 if (lastToken === null || /[+\-*/]/.test(lastToken)) {
@@ -53,13 +53,13 @@ const Calculator = () => {
             }
         }
 
-        console.log("Processed tokens:", processedTokens);
+        // console.log("Processed tokens:", processedTokens);
 
         return processedTokens;
     };
 
     const evaluateExpression = (tokens) => {
-        console.log("Evaluating tokens:", tokens);
+        // console.log("Evaluating tokens:", tokens);
 
         //debugger;
 
@@ -93,7 +93,7 @@ const Calculator = () => {
             }
         }
 
-        console.log("Transformed expression:", newExpression);
+        // console.log("Transformed expression:", newExpression);
 
         try {
             return eval(newExpression);
